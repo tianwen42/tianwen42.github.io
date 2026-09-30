@@ -1,0 +1,85 @@
+title: 木木和他的朋友们
+subtitle:
+description: 木木和他的朋友们
+keywords:
+author: 木木
+language: zh-CN
+timezone: Asia/Shanghai
+
+url: https://tianwen42.top
+root: /
+permalink: posts/:title.html
+permalink_defaults:
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+
+source_dir: source
+public_dir: docs
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+include:
+  - .nojekyll
+skip_render:
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude:
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: false
+  line_number: false
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+archive_generator:
+  enabled: true
+  per_page: 10
+  yearly: true
+  monthly: true
+  daily: false
+
+category_generator:
+  per_page: 10
+  enable_index_page: false
+
+tag_generator:
+  per_page: 10
+  enable_index_page: false
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content: true
+  content_limit: 140
+  content_limit_delim: ' '
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+deploy:
+  type: ''
+
+theme: 3-hexo

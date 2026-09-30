@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>热爱生命</title>
+      <link href="//posts/fab5.html"/>
+      <url>//posts/fab5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="《热爱生命》——汪国真"><a href="#%E3%80%8A%E7%83%AD%E7%88%B1%E7%94%9F%E5%91%BD%E3%80%8B%E2%80%94%E2%80%94%E6%B1%AA%E5%9B%BD%E7%9C%9F" class="headerlink" title="《热爱生命》——汪国真"></a>《热爱生命》——汪国真</h1><blockquote><p>我不去想，<br>是否能够成功 ，<br>既然选择了远方 ，<br>便只顾风雨兼程。<br>我不去想，<br>能否赢得爱情 ，<br>既然钟情于玫瑰 ，<br>就勇敢地吐露真诚 。<br>我不去想，<br>身后会不会袭来寒风冷雨 ，<br>既然目标是地平线，<br>留给世界的只能是背影 。<br>我不去想，<br>未来是平坦还是泥泞 ，<br>只要热爱生命 ，<br>一切，都在意料之中。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣2022-04-19</title>
+      <link href="//posts/9c17.html"/>
+      <url>//posts/9c17.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目"><a href="#%E9%A2%98%E7%9B%AE" class="headerlink" title="题目"></a>题目</h2><ol start="342"><li>4的幂</li></ol><p>难度：简单</p><p>给定一个整数，写一个函数来判断它是否是 4 的幂次方。如果是，返回 true ；否则，返回 false 。</p><p>整数 n 是 4 的幂次方需满足：存在整数 x 使得 n == 4<sup>x</sup></p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n = 16输出：true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n = 5输出：false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 3：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n = 1输出：true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</li></ul><p><strong>进阶：</strong>你能不使用循环或者递归来完成本题吗？</p><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/power-of-four/">https://leetcode-cn.com/problems/power-of-four/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>4的n次幂模4  和 4的 n-k次幂模4 都为0</p></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">/* * @lc app=leetcode.cn id=342 lang=cpp * * [342] 4的幂 */<p>&#x2F;&#x2F; @lc code&#x3D;start<br>class Solution &#123;<br>public:<br>    bool isPowerOfFour(int num) &#123;<br>        return num&gt;0 &amp;&amp; (num &#x3D;&#x3D; 1 ||(num%4&#x3D;&#x3D;0 &amp;&amp; isPowerOfFour(num&#x2F;4)));<br>    &#125;<br>&#125;;<br>&#x2F;&#x2F; @lc code&#x3D;end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣2022-04-16</title>
+      <link href="//posts/9857.html"/>
+      <url>//posts/9857.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目-剑指-Offer-II-079-所有子集"><a href="#%E9%A2%98%E7%9B%AE-%E5%89%91%E6%8C%87-Offer-II-079-%E6%89%80%E6%9C%89%E5%AD%90%E9%9B%86" class="headerlink" title="题目.剑指 Offer II 079. 所有子集"></a>题目.剑指 Offer II 079. 所有子集</h2><p>难度：中等</p><p>给定一个整数数组 nums ，数组中的元素 <strong>互不相同</strong> 。返回该数组所有可能的子集（幂集）。</p><p>解集 <strong>不能</strong> 包含重复的子集。你可以按 <strong>任意顺序</strong> 返回解集。</p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,2,3]输出：[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：nums = [0]输出：[[],[0]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>1 &lt;= nums.length &lt;= 10</li><li>-10 &lt;= nums[i] &lt;= 10</li><li>nums 中的所有元素 <strong>互不相同</strong></li></ul><p>注意：本题与主站 78 题相同： <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/subsets/">https://leetcode-cn.com/problems/subsets/</a></p><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/TVdhkn/">https://leetcode-cn.com/problems/TVdhkn/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>可以正常遍历，也可以用dfs</p></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;public:    vector&lt;vector&lt;int&gt;&gt; subsets(vector&lt;int&gt;&amp; nums) &#123;        vector&lt;vector&lt;int&gt;&gt; res&#123;vector&lt;int&gt;()&#125;;        int i, j, len;        for (i=0; i&lt;nums.size(); i++) &#123;            len = res.size();            for (j=0; j&lt;len; j++) &#123;                auto tmp = res[j];                tmp.push_back(nums[i]);                res.push_back(tmp);            &#125;        &#125;        return res;    &#125;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 剑指 Offer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣2022-04-14</title>
+      <link href="//posts/59d6.html"/>
+      <url>//posts/59d6.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目22-括号生成"><a href="#%E9%A2%98%E7%9B%AE22-%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90" class="headerlink" title="题目22.括号生成"></a>题目22.括号生成</h2><p>难度：中等</p><p>数字 n 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 **有效的 **括号组合。</p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n = 3输出：["((()))","(()())","(())()","()(())","()()()"]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n = 1输出：["()"]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>1 &lt;= n &lt;= 8</li></ul><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/generate-parentheses/">https://leetcode-cn.com/problems/generate-parentheses/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>dfs，左右子树为（），刚好对应二叉树结构</p></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;public:    vector&lt;string&gt; generateParenthesis(int n) &#123;        vector&lt;string&gt; res;        if (n &lt;= 0) return res;        dfs(n, "", res, 0, 0);        return res;    &#125;<pre><code>void dfs(int n, string path, vector&amp;lt;string&amp;gt;&amp;amp; res, int open, int close) &#123;    if (open &amp;gt; n || close &amp;gt; open) return;    if (path.length() == 2 * n) &#123;        res.push_back(path);        return;    &#125;    dfs(n, path + &quot;(&quot;, res, open + 1, close);    dfs(n, path + &quot;)&quot;, res, open, close + 1);&#125;</code></pre><p>};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣2022-04-13</title>
+      <link href="//posts/9b97.html"/>
+      <url>//posts/9b97.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目35-搜索插入位置"><a href="#%E9%A2%98%E7%9B%AE35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE" class="headerlink" title="题目35.搜索插入位置"></a>题目35.搜索插入位置</h2><p>难度：简单</p><p>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p><p>请必须使用时间复杂度为 O(log n) 的算法。</p><p><strong>示例 1:</strong></p><pre class="line-numbers language-none"><code class="language-none">输入: nums = [1,3,5,6], target = 5输出: 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2:</strong></p><pre class="line-numbers language-none"><code class="language-none">输入: nums = [1,3,5,6], target = 2输出: 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 3:</strong></p><pre class="line-numbers language-none"><code class="language-none">输入: nums = [1,3,5,6], target = 7输出: 4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>提示:</strong></p><ul><li>1 &lt;= nums.length &lt;= 10<sup>4</sup></li><li>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></li><li>nums 为 **无重复元素 **的 **升序 **排列数组</li><li>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></li></ul><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/search-insert-position/">https://leetcode-cn.com/problems/search-insert-position/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>简单二分，要求O(log n) ，尽量不要暴力搜索</p></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;public:    int searchInsert(vector&lt;int&gt;&amp; nums, int target) &#123;        int left=0;        int right=nums.size()-1;        int mid=left+(right-left)/2;        if(target&gt;nums[right])&#123;            return right+1;        &#125;        while(left&lt;right)&#123;            if(nums[mid]==target)&#123;                return mid;            &#125;            if(nums[mid]&lt;target)&#123;                left=mid+1;            &#125;else&#123;                right=mid;            &#125;            mid=left+(right-left)/2;        &#125;        return mid;    &#125;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 二分法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣2022-04-11</title>
+      <link href="//posts/5a16.html"/>
+      <url>//posts/5a16.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目42-接雨水"><a href="#%E9%A2%98%E7%9B%AE42-%E6%8E%A5%E9%9B%A8%E6%B0%B4" class="headerlink" title="题目42.接雨水"></a>题目42.接雨水</h2><p>难度：困难</p><p>给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。</p><p><strong>示例 1：</strong></p><img style="height: 161px; width: 412px;" src="https://qiniu.tianwen42.top/picgo/rainwatertrap.png"><pre class="line-numbers language-none"><code class="language-none">输入：height = [0,1,0,2,1,0,1,3,2,1,2,1]输出：6解释：上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：height = [4,2,0,3,2,5]输出：9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>n == height.length</li><li>1 &lt;= n &lt;= 2 * 10<sup>4</sup></li><li>0 &lt;= height[i] &lt;= 10<sup>5</sup></li></ul><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/trapping-rain-water/">https://leetcode-cn.com/problems/trapping-rain-water/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>日常接雨水，暴力搜索，脑子不够</p></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><h3 id="暴力搜索"><a href="#%E6%9A%B4%E5%8A%9B%E6%90%9C%E7%B4%A2" class="headerlink" title="暴力搜索"></a>暴力搜索</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;public:    int trap(vector&lt;int&gt;&amp; nums) &#123;        int maxHeight=0;        <pre><code>    int rain=0;    for(int i=0;i&amp;lt;nums.size();i++)&#123;        maxHeight=max(nums[i],maxHeight);    &#125;    for(int i=0;i&amp;lt;nums.size();i++)&#123;        int maxleft=0,maxright=0;        //左侧最大高度        for(int j=0;j&amp;lt;=i;j++)&#123;            maxleft=max(maxleft,nums[j]);        &#125;        // 右侧最大高度        for(int j=i;j&amp;lt;nums.size();j++)&#123;            maxright=max(maxright,nums[j]);        &#125;        //当前位置可接高度min(Maxleft,Maxright),取决于左右最大高度低值        rain+=min(maxright, maxleft)-nums[i];;    &#125;    return rain;&#125;</code></pre><p>};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p><blockquote><p>超时了！！！×&amp;%￥#@……。</p><p>果然日常接雨水啊！！！！！</p></blockquote><h3 id="DP法"><a href="#DP%E6%B3%95" class="headerlink" title="DP法"></a>DP法</h3><blockquote><p>看看别人的，需要从两头重新遍历一遍求出左右两侧的最大高度，这里是有很多重复计算的，很明显最大高度是可以记忆化的，用两个数组分别存每个位置的左右最大高度，</p><p>int[][] dp = new int [n] [2],其中，dp [i] [0] 表示下标i的柱子左边的最大值，dp[i] [1] 表示下标i的柱子右边的最大值。</p><p>类比这题</p><ul><li><a target="_blank" rel="noopener" href="https://tianwen42.top/posts/ea37.html">807.城市天际线</a></li></ul></blockquote><p>左右高度数组如下图所示</p><p><img src="https://qiniu.tianwen42.top/picgo/rain0421.jpg" alt="img"></p><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;public:int trap(vector&lt;int&gt;&amp; height) &#123;int n = height.size();// left[i]表示i左边的最大值，right[i]表示i右边的最大值vector&lt;int&gt; left(n), right(n);for (int i = 1; i &lt; n; i++) &#123;left[i] = max(left[i - 1], height[i - 1]);&#125;for (int i = n - 2; i &gt;= 0; i--) &#123;right[i] = max(right[i + 1], height[i + 1]);&#125;int water = 0;for (int i = 0; i &lt; n; i++) &#123;int level = min(left[i], right[i]);water += max(0, level - height[i]);&#125;return water;&#125;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 接雨水 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣2022-04-10-2</title>
+      <link href="//posts/7bb.html"/>
+      <url>//posts/7bb.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目852-山脉数组的峰顶索引"><a href="#%E9%A2%98%E7%9B%AE852-%E5%B1%B1%E8%84%89%E6%95%B0%E7%BB%84%E7%9A%84%E5%B3%B0%E9%A1%B6%E7%B4%A2%E5%BC%95" class="headerlink" title="题目852.山脉数组的峰顶索引"></a>题目852.山脉数组的峰顶索引</h2><p>难度：简单</p><p><strong>山脉数组</strong><code>arr</code></p><ul><li>arr.length &gt;= 3</li><li>存在 i（0 &lt; i &lt; arr.length - 1）使得：  <ul>      <li>arr[0] &lt; arr[1] &lt; ... arr[i-1] &lt; arr[i] </li>      <li>arr[i] &gt; arr[i+1] &gt; ... &gt; arr[arr.length - 1]</li>  </ul></li></ul><p>给你由整数组成的山脉数组 arr ，返回任何满足 arr[0] &lt; arr[1] &lt; … arr[i - 1] &lt; arr[i] &gt; arr[i + 1] &gt; … &gt; arr[arr.length - 1] 的下标 i 。</p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：arr = [0,1,0]输出：1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：arr = [0,2,1,0]输出：1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 3：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：arr = [0,10,5,2]输出：1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 4：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：arr = [3,4,5,1]输出：2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 5：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：arr = [24,69,100,99,79,78,67,36,26,19]输出：2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>3 &lt;= arr.length &lt;= 10<sup>4</sup></li><li>0 &lt;= arr[i] &lt;= 10<sup>6</sup></li><li>题目数据保证 arr 是一个山脉数组</li></ul><p><strong>进阶：</strong>很容易想到时间复杂度 O(n) 的解决方案，你可以设计一个 O(log(n)) 的解决方案吗？</p><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/">https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><ol><li>直接暴力法arr[i]&gt;arr[i-1]&amp;&amp;arr[i]&gt;arr[i+1]</li><li>二分法</li></ol><p>支持暴力法和二分法，显然二分法更快</p></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//暴力法class Solution &#123;public:    int peakIndexInMountainArray(vector&lt;int&gt;&amp; arr) &#123;        if(arr[0]&gt;arr[1])&#123;            return 0;        &#125;        for(int i=1;i&lt;arr.size()-1;i++)&#123;            if(arr[i]&gt;arr[i-1]&amp;&amp;arr[i]&gt;arr[i+1])&#123;                return i;            &#125;         &#125;        return arr.size()-1;    &#125;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;public:    int peakIndexInMountainArray(vector&lt;int&gt;&amp; arr) &#123;        // if(arr[0]&gt;arr[1])&#123;return 0;&#125;        int left=0,right=arr.size()-1,mid=left+(right-left)/2;        while(left!=right)&#123;            if(arr[left]&lt;arr[mid])&#123;                right=mid;            &#125;else&#123;                left=mid+1;            &#125;            mid=left+(right-left)/2;        &#125;        return left;    &#125;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣2022-04-10</title>
+      <link href="//posts/b877.html"/>
+      <url>//posts/b877.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目374-猜数字大小"><a href="#%E9%A2%98%E7%9B%AE374-%E7%8C%9C%E6%95%B0%E5%AD%97%E5%A4%A7%E5%B0%8F" class="headerlink" title="题目374.猜数字大小"></a>题目374.猜数字大小</h2><p>难度：简单</p><p>猜数字游戏的规则如下：</p><ul><li>每轮游戏，我都会从 <strong>1</strong> 到 <em><strong>n</strong></em> 随机选择一个数字。 请你猜选出的是哪个数字。</li><li>如果你猜错了，我会告诉你，你猜测的数字比我选出的数字是大了还是小了。</li></ul><p>你可以通过调用一个预先定义好的接口 int guess(int num) 来获取猜测结果，返回值一共有 3 种可能的情况（-1，1 或 0）：</p><ul><li>-1：我选出的数字比你猜的数字小 pick &lt; num</li><li>1：我选出的数字比你猜的数字大 pick &gt; num</li><li>0：我选出的数字和你猜的数字一样。恭喜！你猜对了！pick == num</li></ul><p>返回我选出的数字。</p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n = 10, pick = 6输出：6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n = 1, pick = 1输出：1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 3：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n = 2, pick = 1输出：1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 4：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n = 2, pick = 2输出：2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>1 &lt;= n &lt;= 2<sup>31</sup> - 1</li><li>1 &lt;= pick &lt;= n</li></ul><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/guess-number-higher-or-lower/">https://leetcode-cn.com/problems/guess-number-higher-or-lower/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p><strong>二分核心</strong>，精髓，这样写防止越界，mid = left + ((right - left) / 2);</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>l<span class="token operator">!=</span>r<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>    <span class="token keyword">int</span> mid <span class="token operator">=</span> l <span class="token operator">+</span><span class="token punctuation">(</span>r <span class="token operator">-</span> l<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">guess</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span> l <span class="token operator">=</span> mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>    <span class="token keyword">else</span> r <span class="token operator">=</span> mid<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token keyword">extends</span> <span class="token class-name">GuessGame</span> <span class="token punctuation">&#123;</span>    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">guessNumber</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> r <span class="token operator">=</span> n<span class="token punctuation">;</span>        <span class="token keyword">while</span><span class="token punctuation">(</span>l<span class="token operator">!=</span>r<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>            <span class="token keyword">int</span> mid <span class="token operator">=</span> l <span class="token operator">+</span><span class="token punctuation">(</span>r <span class="token operator">-</span> l<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span>            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">guess</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span> l <span class="token operator">=</span> mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>            <span class="token keyword">else</span> r <span class="token operator">=</span> mid<span class="token punctuation">;</span>        <span class="token punctuation">&#125;</span>        <span class="token keyword">return</span> l<span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 二分查找 </tag>
+            
+            <tag> 核心 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣2022-04-06</title>
+      <link href="//posts/ea37.html"/>
+      <url>//posts/ea37.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目807-保持城市天际线"><a href="#%E9%A2%98%E7%9B%AE807-%E4%BF%9D%E6%8C%81%E5%9F%8E%E5%B8%82%E5%A4%A9%E9%99%85%E7%BA%BF" class="headerlink" title="题目807.保持城市天际线"></a>题目807.保持城市天际线</h2><p>难度：中等</p><p>给你一座由 n x n 个街区组成的城市，每个街区都包含一座立方体建筑。给你一个下标从 <strong>0</strong> 开始的 n x n 整数矩阵 grid ，其中 grid[r][c] 表示坐落于 r 行 c 列的建筑物的 <strong>高度</strong> 。</p><p>城市的 <strong>天际线</strong> 是从远处观察城市时，所有建筑物形成的外部轮廓。从东、南、西、北四个主要方向观测到的 <strong>天际线</strong> 可能不同。</p><p>我们被允许为 <strong>任意数量的建筑物 <strong>的高度增加</strong> 任意增量（不同建筑物的增量可能不同）</strong> 。 高度为 0 的建筑物的高度也可以增加。然而，增加的建筑物高度 <strong>不能影响</strong> 从任何主要方向观察城市得到的 <strong>天际线</strong> 。</p><p>在 <strong>不改变</strong> 从任何主要方向观测到的城市 <strong>天际线</strong> 的前提下，返回建筑物可以增加的 <strong>最大高度增量总和</strong> 。</p><p><strong>示例 1：</strong></p><img style="width: 700px; height: 603px;" src="https://qiniu.tianwen42.top/picgo/807-ex1.png" alt=""><pre class="line-numbers language-none"><code class="language-none">输入：grid = [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]输出：35解释：建筑物的高度如上图中心所示。用红色绘制从不同方向观看得到的天际线。在不影响天际线的情况下，增加建筑物的高度：gridNew = [ [8, 4, 8, 7],            [7, 4, 7, 7],            [9, 4, 8, 7],            [3, 3, 3, 3] ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：grid = [[0,0,0],[0,0,0],[0,0,0]]输出：0解释：增加任何建筑物的高度都会导致天际线的变化。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>n == grid.length</li><li>n == grid[r].length</li><li>2 &lt;= n &lt;= 50</li><li>0 &lt;= grid[r][c] &lt;= 100</li></ul><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/max-increase-to-keep-city-skyline/">https://leetcode-cn.com/problems/max-increase-to-keep-city-skyline/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>正视（先列中最大）和侧视（先行中最大）的最大值，再求n*n根据两个组的最小数赋值给[i,j]，即为当前的楼最低点，算与真实的差值即为加高层数</p></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;public:    int maxIncreaseKeepingSkyline(vector&lt;vector&lt;int&gt;&gt;&amp; grid) &#123;        int n=grid.size();        //侧视图天际线最低        vector&lt;int&gt; row_max_min(n);        //正视图天际线最低        vector&lt;int&gt; col_max_min(n);        for(int i=0;i&lt;n;i++)&#123;            int tmp=*max_element(grid[i].begin(),grid[i].end());            row_max_min[i]=tmp;        &#125;        for(int i = 0; i &lt; n; i++)        &#123;            for(int j = 0; j &lt; n; j++)            &#123;                col_max_min[j] = max(col_max_min[j], grid[i][j]);            &#125;        &#125;        int res = 0;        for(int i = 0; i &lt; n; i++)        &#123;            for(int j = 0; j &lt; n; j++)            &#123;                res += min(col_max_min[j],row_max_min[i])-grid[i][j];            &#125;        &#125;        return res;    &#125;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣2022-03-27</title>
+      <link href="//posts/fe37.html"/>
+      <url>//posts/fe37.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目704-二分查找"><a href="#%E9%A2%98%E7%9B%AE704-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE" class="headerlink" title="题目704.二分查找"></a>题目704.二分查找</h2><p>难度：简单</p><p>给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。</p><br>**示例 1:**<pre class="line-numbers language-none"><code class="language-none">输入: nums = [-1,0,3,5,9,12], target = 9输出: 4解释: 9 出现在 nums 中并且下标为 4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>示例 2:</strong></p><pre class="line-numbers language-none"><code class="language-none">输入: nums = [-1,0,3,5,9,12], target = 2输出: -1解释: 2 不存在 nums 中因此返回 -1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ol><li>你可以假设 nums 中的所有元素是不重复的。</li><li>n 将在 [1, 10000]之间。</li><li>nums 的每个元素都将在 [-9999, 9999]之间。</li></ol><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-search/">https://leetcode-cn.com/problems/binary-search/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>两种方法，注意边界条件和更新条件</p></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;public:    // 定义target在左闭右开的区间里，即：[left, right]    int search(vector&lt;int&gt; &amp;nums, int target) &#123;        int head = 0;        int rear = nums.size() - 1;        int mid;        while (head &lt;= rear) &#123;            mid = (head + rear) / 2;            if (nums[mid] == target)                return mid;            else if (nums[mid] &lt; target) &#123;                head = mid + 1; // 注意            &#125; else if (nums[mid] &gt; target) &#123;                rear = mid - 1;            &#125;        &#125;        return 0;    &#125;<pre><code>// 定义target在左闭右开的区间里，即：[left, right)int search2(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) &#123;    int left = 0;    int right = nums.size(); // 定义target在左闭右开的区间里，即：[left, right)    while (left &amp;lt; right) &#123; // 因为left == right的时候，在[left, right)是无效的空间，所以使用 &amp;lt;        int middle = left + ((right - left) &amp;gt;&amp;gt; 1);        if (nums[middle] &amp;gt; target) &#123;            right = middle; // target 在左区间，在[left, middle)中        &#125; else if (nums[middle] &amp;lt; target) &#123;            left = middle + 1; // target 在右区间，在[middle + 1, right)中        &#125; else &#123; // nums[middle] == target            return middle; // 数组中找到目标值，直接返回下标        &#125;    &#125;    // 未找到目标值    return -1;&#125;</code></pre><p>};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣2022-03-25</title>
+      <link href="//posts/3fb6.html"/>
+      <url>//posts/3fb6.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目"><a href="#%E9%A2%98%E7%9B%AE" class="headerlink" title="题目"></a>题目</h2><ol start="217"><li>存在重复元素</li></ol><p>难度：简单</p><p><code>nums</code></p><p><strong>至少两次</strong></p><p><code>true</code></p><p><code>false</code></p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,2,3,1]输出：true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,2,3,4]输出：false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 3：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：nums = [1,1,1,3,3,4,3,2,4,2]输出：true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>1 &lt;= nums.length &lt;= 10<sup>5</sup></li><li>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></li></ul><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/contains-duplicate/">https://leetcode-cn.com/problems/contains-duplicate/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>排序，有相同的肯定近邻</p></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution &#123;<p>public:<br>    bool containsDuplicate(vector&lt;int&gt;&amp; nums) &#123;<br>        sort(nums.begin(), nums.end());<br>        while(nums.size()&gt;1&amp;&amp;(nums[nums.size()-1]!&#x3D;nums[nums.size()-2]))&#123;<br>            &#x2F;&#x2F; 判断栈顶和倒二是否相等，注意边界条件<br>            nums.pop_back();<br>        &#125;<br>        &#x2F;&#x2F; for(int i&#x3D;0; i&lt;nums.size();i++)&#123;<br>        &#x2F;&#x2F;     cout &lt;&lt; nums[i] &lt;&lt; “ “;<br>        &#x2F;&#x2F; &#125;<br>        if(nums.size()&#x3D;&#x3D;1) return false;else return true;<br>    &#125;<br>&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2021归档</title>
+      <link href="//posts/b2d9.html"/>
+      <url>//posts/b2d9.html</url>
+      
+        <content type="html"><![CDATA[<p>堆了个奇怪的雪人</p><p><img src="http://qiniu.tianwen42.top/picgo/IMG_20201229_200725.jpg" alt="IMG_20201229_200725"></p><p>秦淮河畔</p><p><img src="http://qiniu.tianwen42.top/picgo/IMG_20210429_191925.jpg" alt="IMG_20210429_191925"></p><p><img src="http://qiniu.tianwen42.top/picgo/IMG_20211017_113126.jpg" alt="IMG_20211017_113126"></p><p><img src="http://qiniu.tianwen42.top/picgo/0009.jpg" alt="0009"><img src="http://qiniu.tianwen42.top/picgo/%5BThumb%5D640326600415-3ec0b87c-0587-317d-862b-68d4c1744c4f.jpg" alt="[Thumb]640326600415-3ec0b87c-0587-317d-862b-68d4c1744c4f"></p><img src="http://qiniu.tianwen42.top/picgo/mmexport1641051034837.jpg" alt="mmexport1641051034837" style="zoom:50%;"><p><img src="http://qiniu.tianwen42.top/picgo/mmexport1642862346561.jpg" alt="mmexport1642862346561"><img src="http://qiniu.tianwen42.top/picgo/mmexport1640590404629.jpg" alt="mmexport1640590404629"></p><p><img src="http://qiniu.tianwen42.top/picgo/IMG_20220125_130126.jpg" alt="IMG_20220125_130126"></p><p>分割线，听首歌吧</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="530" height="86" src="//music.163.com/outchain/player?type=2&amp;id=26494698&amp;auto=0&amp;height=66"></iframe>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 归档 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣2022-03-03</title>
+      <link href="//posts/5d37.html"/>
+      <url>//posts/5d37.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目343-整数拆分"><a href="#%E9%A2%98%E7%9B%AE343-%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86" class="headerlink" title="题目343. 整数拆分"></a>题目343. 整数拆分</h2><p>难度：中等</p><p>给定一个正整数 n ，将其拆分为 k 个 <strong>正整数</strong> 的和（ k &gt;= 2 ），并使这些整数的乘积最大化。</p><p>返回 <em>你可以获得的最大乘积</em> 。</p><p><strong>示例 1:</strong></p><pre class="line-numbers language-none"><code class="language-none">输入: n = 2输出: 1解释: 2 = 1 + 1, 1 × 1 = 1。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>示例 2:</strong></p><pre class="line-numbers language-none"><code class="language-none">输入: n = 10输出: 36解释: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>提示:</strong></p><ul><li>2 &lt;= n &lt;= 58</li></ul><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/integer-break/">https://leetcode-cn.com/problems/integer-break/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>dp题目</p><p>dp[i] = max(dp[i], max((i - j) * j, dp[i - j] * j));</p><p>dp[i] 是依靠 dp[i - j]的状态，所以遍历i一定是从前向后遍历，先有dp[i - j]再有dp[i]</p></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//动态规划class Solution &#123;public:    int integerBreak(int n) &#123;        if(n==2)            return 1;        vector&lt;int&gt; dp(n+1,0);        dp[2] = 1;        for(int i=3;i&lt;=n;++i)&#123;            for(int j=1;j&lt;i;++j)                dp[i] = max(dp[i],max(dp[i-j]*j,(i-j)*j));        &#125;        return dp[n];    &#125;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//贪心算法//时间复杂度O(n)//空间复杂度O(1)class Solution &#123;public:    int integerBreak(int n) &#123;        if (n == 2) return 1;        if (n == 3) return 2;        if (n == 4) return 4;        int result = 1;        while (n &gt; 4) &#123;            result *= 3;            n -= 3;        &#125;        result *= n;        return result;    &#125;&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> dp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣2022-02-28</title>
+      <link href="//posts/676.html"/>
+      <url>//posts/676.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目7-整数反转"><a href="#%E9%A2%98%E7%9B%AE7-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC" class="headerlink" title="题目7.整数反转"></a>题目7.整数反转</h2><p>难度：中等</p><p>给你一个 32 位的有符号整数 x ，返回将 x 中的数字部分反转后的结果。</p><p>如果反转后整数超过 32 位的有符号整数的范围 [−2<sup>31</sup>,  2<sup>31 </sup>− 1] ，就返回 0。</p><p><strong>假设环境不允许存储 64 位整数（有符号或无符号）。</strong></p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：x = 123输出：321<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：x = -123输出：-321<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 3：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：x = 120输出：21<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 4：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：x = 0输出：0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>-2<sup>31</sup> &lt;= x &lt;= 2<sup>31</sup> - 1</li></ul><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-integer/">https://leetcode-cn.com/problems/reverse-integer/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>整数翻转，123 –&gt; 3 * 10+2 –&gt; 32 * 10+1 –&gt;321</p><p>想到另一个整数拼接的思路 123 –&gt; 123 * 10+1 –&gt; 1231 * 10 +2 –&gt; 12312 * 10 +3 –&gt;123123</p><p>再一个就是整数对称的思路 123 –&gt; 123 * 10+3 –&gt; 1231 * 10 +2 –&gt; 12312 * 10 +1 –&gt;123321</p></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//123  321//-123 -321//0    0#include &lt;iostream&gt;<p>class Solution &#123;<br>public:<br>    int reverse2(int x) &#123;<br>        int ans &#x3D; 0;<br>        while(x !&#x3D; 0)<br>        &#123;<br>            if(ans &gt; INT_MAX || ans &lt; INT_MIN)<br>                return 0;<br>            ans &#x3D; ans * 10 + x % 10;<br>            x &#x2F;&#x3D; 10;<br>        &#125;<br>        return ans;<br>    &#125;<br>&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//数字对称//123 123321//-8 -88//-10 -1001int symmetryReverse(int x) &#123;        using namespace std;        int ans = x;        while(x != 0)        &#123;            if(ans &gt; INT_MAX || ans &lt; INT_MIN)                return 0;            ans = ans * 10 + x % 10;            //cout&lt;&lt;ans&lt;&lt;endl;            x /= 10;        &#125;        return ans;    &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//数字重复//105 105105//10  1010//1   11int digitalRepeated(int x) &#123;        using namespace std;                int ans = x;        int num = 1 + log10(x);  //位数        for (int i = num - 1; i &gt;= 0; i--) &#123;            if (ans == 0 || ans &gt; INT_MAX || ans &lt; INT_MIN)      //用for要注意0或者溢出                return 0;            int maxdigit = (int) pow(10, i);            // cout&lt;&lt;ans&lt;&lt;endl;            ans = ans * 10 + (x / maxdigit) % 10;            x %= maxdigit;        &#125;        return ans;    &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>由这一题抽象出对数字的常规算法，详情见<a href="">数字切片</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 数字切片 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣2022-02-27</title>
+      <link href="//posts/236.html"/>
+      <url>//posts/236.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目1221-分割平衡字符串"><a href="#%E9%A2%98%E7%9B%AE1221-%E5%88%86%E5%89%B2%E5%B9%B3%E8%A1%A1%E5%AD%97%E7%AC%A6%E4%B8%B2" class="headerlink" title="题目1221.分割平衡字符串"></a>题目1221.分割平衡字符串</h2><p>难度：简单</p><p>在一个 <strong>平衡字符串</strong> 中，’L’ 和 ‘R’ 字符的数量是相同的。</p><p>给你一个平衡字符串 s，请你将它分割成尽可能多的平衡字符串。</p><p><strong>注意：</strong>分割得到的每个字符串都必须是平衡字符串，且分割得到的平衡字符串是原平衡字符串的连续子串。</p><p>返回可以通过分割得到的平衡字符串的 <strong>最大数量</strong> <strong>。</strong></p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：s = "RLRRLLRLRL"输出：4解释：s 可以分割为 "RL"、"RRLL"、"RL"、"RL" ，每个子字符串中都包含相同数量的 'L' 和 'R' 。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：s = "RLLLLRRRLR"输出：3解释：s 可以分割为 "RL"、"LLLRRR"、"LR" ，每个子字符串中都包含相同数量的 'L' 和 'R' 。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>示例 3：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：s = "LLLLRRRR"输出：1解释：s 只能保持原样 "LLLLRRRR".<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>示例 4：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：s = "RLRRRLLRLL"输出：2解释：s 可以分割为 "RL"、"RRRLLRLL" ，每个子字符串中都包含相同数量的 'L' 和 'R' 。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>1 &lt;= s.length &lt;= 1000</li><li>s[i] = ‘L’ 或 ‘R’</li><li>s 是一个 <strong>平衡</strong> 字符串</li></ul><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/split-a-string-in-balanced-strings/">https://leetcode-cn.com/problems/split-a-string-in-balanced-strings/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>上楼梯问题，L下一步R上一步，在平地上num+1</p><p>“括号匹配”问题,主要是栈操作,’R’进栈,’L’出栈,栈空则匹配成功,结果加一</p></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">balancedStringSplit</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>        s<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>        stack<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>        high<span class="token punctuation">,</span>num<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span>        <span class="token keyword">while</span> s<span class="token punctuation">:</span>            <span class="token keyword">if</span> s<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">!=</span><span class="token string">'R'</span><span class="token punctuation">:</span>                high<span class="token operator">-=</span><span class="token number">1</span>            <span class="token keyword">else</span><span class="token punctuation">:</span>                high<span class="token operator">+=</span><span class="token number">1</span>            <span class="token keyword">if</span> high<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">:</span>                num<span class="token operator">+=</span><span class="token number">1</span>        <span class="token keyword">return</span> num<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 字符串 </tag>
+            
+            <tag> 贪心算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣 2022-02-26</title>
+      <link href="//posts/9ea3.html"/>
+      <url>//posts/9ea3.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目917-仅仅反转字母"><a href="#%E9%A2%98%E7%9B%AE917-%E4%BB%85%E4%BB%85%E5%8F%8D%E8%BD%AC%E5%AD%97%E6%AF%8D" class="headerlink" title="题目917.仅仅反转字母"></a>题目917.仅仅反转字母</h2><p>难度：简单</p><p>给你一个字符串 s ，根据下述规则反转字符串：</p><ul><li>所有非英文字母保留在原有位置。</li><li>所有英文字母（小写或大写）位置反转。</li></ul><p>返回反转后的 s<em> 。</em></p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：s = "ab-cd"输出："dc-ba"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：s = "a-bC-dEf-ghIj"输出："j-Ih-gfE-dCba"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 3：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：s = "Test1ng-Leet=code-Q!"输出："Qedo1ct-eeLg=ntse-T!"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>提示</strong></p><ul><li>1 &lt;= s.length &lt;= 100</li><li>s 仅由 ASCII 值在范围 [33, 122] 的字符组成</li><li>s 不含 ‘"‘ 或 ‘\‘</li></ul><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-only-letters/">https://leetcode-cn.com/problems/reverse-only-letters/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>双指针法遍历</p></blockquote><h2 id=""><a href="#" class="headerlink" title=""></a></h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">reverseOnlyLetters</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">str</span><span class="token punctuation">:</span>        s<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>        head<span class="token punctuation">,</span>tail<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span>        <span class="token keyword">while</span><span class="token punctuation">(</span>head<span class="token operator">&lt;</span>tail<span class="token punctuation">)</span><span class="token punctuation">:</span>            <span class="token keyword">if</span> s<span class="token punctuation">[</span>head<span class="token punctuation">]</span><span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">and</span> s<span class="token punctuation">[</span>tail<span class="token punctuation">]</span><span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>                s<span class="token punctuation">[</span>head<span class="token punctuation">]</span><span class="token punctuation">,</span>s<span class="token punctuation">[</span>tail<span class="token punctuation">]</span><span class="token operator">=</span>s<span class="token punctuation">[</span>tail<span class="token punctuation">]</span><span class="token punctuation">,</span>s<span class="token punctuation">[</span>head<span class="token punctuation">]</span>    <span class="token comment">#交换</span>                head<span class="token operator">+=</span><span class="token number">1</span>                tail<span class="token operator">-=</span><span class="token number">1</span>            <span class="token keyword">elif</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>head<span class="token punctuation">]</span><span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>tail<span class="token punctuation">]</span><span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>                tail<span class="token operator">-=</span><span class="token number">1</span>            <span class="token keyword">elif</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>head<span class="token punctuation">]</span><span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token boolean">False</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>tail<span class="token punctuation">]</span><span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>                head<span class="token operator">+=</span><span class="token number">1</span>            <span class="token keyword">elif</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>head<span class="token punctuation">]</span><span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token boolean">False</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>tail<span class="token punctuation">]</span><span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>                head<span class="token operator">+=</span><span class="token number">1</span>                tail<span class="token operator">-=</span><span class="token number">1</span>        <pre><code>    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣 2022-02-25</title>
+      <link href="//posts/9fe3.html"/>
+      <url>//posts/9fe3.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目509-斐波那契数"><a href="#%E9%A2%98%E7%9B%AE509-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0" class="headerlink" title="题目509.斐波那契数"></a>题目509.斐波那契数</h2><p>难度：简单</p><p><strong>斐波那契数</strong> （通常用 F(n) 表示）形成的序列称为 <strong>斐波那契数列</strong> 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：</p><pre class="line-numbers language-none"><code class="language-none">F(0) = 0，F(1) = 1F(n) = F(n - 1) + F(n - 2)，其中 n &gt; 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>给定 n ，请计算 F(n) 。</p><p><strong>示例 1：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n = 2输出：1解释：F(2) = F(1) + F(0) = 1 + 0 = 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>示例 2：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n = 3输出：2解释：F(3) = F(2) + F(1) = 1 + 1 = 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>示例 3：</strong></p><pre class="line-numbers language-none"><code class="language-none">输入：n = 4输出：3解释：F(4) = F(3) + F(2) = 2 + 1 = 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>0 &lt;= n &lt;= 30</li></ul><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fibonacci-number/">https://leetcode-cn.com/problems/fibonacci-number/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#递归法</span><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>        <span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword">return</span> <span class="token number">0</span>        <span class="token keyword">elif</span><span class="token punctuation">(</span>n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword">return</span> <span class="token number">1</span>        <span class="token keyword">else</span><span class="token punctuation">:</span><span class="token keyword">return</span> self<span class="token punctuation">.</span>fib<span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span>self<span class="token punctuation">.</span>fib<span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="http://cdn.tianwen42.top/picgo/image-20220225133243080.png" alt="image-20220225133243080"></p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#通项法</span><span class="token keyword">import</span> math<p><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span><br>    <span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token punctuation">:</span><br>        <span class="token triple-quoted-string string">“””<br>        :type N: int<br>        :rtype: int<br>        “””</span><br>        sqrt5<span class="token operator">&#x3D;</span>math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><br>        <span class="token keyword">return</span> <span class="token builtin">round</span><span class="token punctuation">(</span><span class="token builtin">pow</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">+</span>sqrt5<span class="token punctuation">)</span><span class="token operator">&#x2F;</span><span class="token number">2</span><span class="token punctuation">,</span>N<span class="token punctuation">)</span><span class="token operator">&#x2F;</span>sqrt5<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 斐波那契数列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力扣 2022-02-24</title>
+      <link href="//posts/a858.html"/>
+      <url>//posts/a858.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目13-罗马数字转整数"><a href="#%E9%A2%98%E7%9B%AE13-%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0" class="headerlink" title="题目13. 罗马数字转整数"></a>题目13. 罗马数字转整数</h2><p>难度：简单</p><p>罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。</p><pre class="line-numbers language-none"><code class="language-none">字符          数值I             1V             5X             10L             50C             100D             500M             1000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>例如， 罗马数字 2 写做 II ，即为两个并列的 1 。12 写做 XII ，即为 X + II 。 27 写做  XXVII, 即为 XX + V + II 。</p><p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</p><ul><li>I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。</li><li>X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。 </li><li>C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。</li></ul><p>给定一个罗马数字，将其转换成整数。</p><p><strong>示例 1:</strong></p><pre class="line-numbers language-none"><code class="language-none">输入: s = "III"输出: 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2:</strong></p><pre class="line-numbers language-none"><code class="language-none">输入: s = "IV"输出: 4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 3:</strong></p><pre class="line-numbers language-none"><code class="language-none">输入: s = "IX"输出: 9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 4:</strong></p><pre class="line-numbers language-none"><code class="language-none">输入: s = "LVIII"输出: 58解释: L = 50, V= 5, III = 3.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>示例 5:</strong></p><pre class="line-numbers language-none"><code class="language-none">输入: s = "MCMXCIV"输出: 1994解释: M = 1000, CM = 900, XC = 90, IV = 4.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>提示：</strong></p><ul><li>1 &lt;= s.length &lt;= 15</li><li>s 仅含字符 (‘I’, ‘V’, ‘X’, ‘L’, ‘C’, ‘D’, ‘M’)</li><li>题目数据保证 s 是一个有效的罗马数字，且表示整数在范围 [1, 3999] 内</li><li>题目所给测试用例皆符合罗马数字书写规则，不会出现跨位等情况。</li><li>IL 和 IM 这样的例子并不符合题目要求，49 应该写作 XLIX，999 应该写作 CMXCIX 。</li><li>关于罗马数字的详尽书写规则，可以参考 <a target="_blank" rel="noopener" href="https://b2b.partcommunity.com/community/knowledge/zh_CN/detail/10753/%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97#knowledge_article">罗马数字 - Mathematics </a>。</li></ul><p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/roman-to-integer/">https://leetcode-cn.com/problems/roman-to-integer/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解题思路"><a href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote><p>替换双位罗马字符，再映射</p></blockquote><h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">romanToInt</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>        s <span class="token operator">=</span> s<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'CM'</span><span class="token punctuation">,</span> <span class="token string">'Q'</span><span class="token punctuation">)</span>        s <span class="token operator">=</span> s<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'CD'</span><span class="token punctuation">,</span> <span class="token string">'W'</span><span class="token punctuation">)</span>        s <span class="token operator">=</span> s<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'XC'</span><span class="token punctuation">,</span> <span class="token string">'E'</span><span class="token punctuation">)</span>        s <span class="token operator">=</span> s<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'XL'</span><span class="token punctuation">,</span> <span class="token string">'R'</span><span class="token punctuation">)</span>        s <span class="token operator">=</span> s<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'IX'</span><span class="token punctuation">,</span> <span class="token string">'T'</span><span class="token punctuation">)</span>        s <span class="token operator">=</span> s<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'IV'</span><span class="token punctuation">,</span> <span class="token string">'Y'</span><span class="token punctuation">)</span><pre><code>    keys &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&#123;&lt;/span&gt;        &lt;span class=&quot;token string&quot;&gt;&#39;Q&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;900&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;token string&quot;&gt;&#39;W&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;token string&quot;&gt;&#39;E&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;token string&quot;&gt;&#39;R&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;token string&quot;&gt;&#39;T&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;token string&quot;&gt;&#39;Y&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;token string&quot;&gt;&#39;M&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;token string&quot;&gt;&#39;D&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;token string&quot;&gt;&#39;C&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;token string&quot;&gt;&#39;L&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;token string&quot;&gt;&#39;X&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;token string&quot;&gt;&#39;V&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;        &lt;span class=&quot;token string&quot;&gt;&#39;I&#39;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;    &lt;span class=&quot;token punctuation&quot;&gt;&#125;&lt;/span&gt;    ans &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; ch &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; s&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;        ans &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; keys&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;ch&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; ans&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深入理解C指针</title>
+      <link href="//posts/e801.html"/>
+      <url>//posts/e801.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="指针"><a href="#%E6%8C%87%E9%92%88" class="headerlink" title="指针"></a>指针</h3><blockquote><ol><li>普通指针</li><li><a href="####%E6%8C%87%E5%90%91const%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8C%87%E9%92%88">指向 const 对象的指针</a></li><li><a href="####%E6%8C%87%E5%90%91%E9%9D%9Econst%E5%AF%B9%E8%B1%A1%E7%9A%84const%E6%8C%87%E9%92%88">指向 非const 对象的 const 指针</a></li><li><a href="####%E6%8C%87%E5%90%91const%E5%AF%B9%E8%B1%A1%E7%9A%84const%E6%8C%87%E9%92%88">指向 const 对象的 const 指针</a></li></ol></blockquote><p>首先区分引用变量与指针的区别</p><blockquote><p>当创建一个变量时，通过变量名修改和指针修改的安全性不同</p></blockquote><p><img src="http://qiniu.tianwen42.top/picgo/image-20220303143051994.png" alt="image-20220303143051994"></p><h3 id="内存泄漏"><a href="#%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F" class="headerlink" title="内存泄漏"></a>内存泄漏</h3><p>tips</p><ul><li><p>创建内存后一定记得free, malloc,free成对出现</p></li><li><p>指针创建后记得要初始化</p></li></ul><p>初始化静态或全局变量不能调用函数，如</p><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">static int *pi=malloc(sizeof(int));  //编译错误<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>改为</p><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">static int *pi;pi = malloc(sizeof(int));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 指针 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>仲夏</title>
+      <link href="//posts/d9c69240.html"/>
+      <url>//posts/d9c69240.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>欲买桂花同载酒，终不似、少年游。 </p></blockquote><p align="center"><img src="http://cdn.tianwen42.top/img/picgo/20210804165007.jpg" alt="Meting" height="500"></p><p>在信息超载的时代，不要停止了思考啊</p><span id="more"></span><h1 id="关于这个暑假"><a href="#%E5%85%B3%E4%BA%8E%E8%BF%99%E4%B8%AA%E6%9A%91%E5%81%87" class="headerlink" title="关于这个暑假"></a>关于这个暑假</h1><p>这暑假，大概有奥运会，暴雨，疫情这么些事。</p><p>时间总是过得非常快的，转眼就到了八月，几天前我还困在matlab建模的泥潭里挣扎着，当然了，现在也还是在泥里。</p><p>几天前路过我这个城市里卖书的一条街，我记得以前老是来这里买书，在那个网络购物还不发达的时代，以前所有的教材书籍都要来这买，每次开学都人挤人，想来已经有好多年没来了，这次来这儿，是陪我在上小学的妹妹，我说要送她几本书，让她随便挑书，最后她愣是没挑出来，倒是我买了两本书，我高中时候就会看这两本书，他们着实为我的高中生活增加了些颜色。想起来系统的看书是什么时候呢，我记得大一的时候借了很多书，虽然不一定看完，也都算认真的看了看，现在借书看一下子就耐不住性子了，是不是看多了视频之类的内容，而接受不来慢下来的内容了？我一时间竟感到的羞愧.</p><p><img src="http://cdn.tianwen42.top/img/picgo/20210804164932.jpg" alt="57b30981a3a47c6f67e8b380882843a"></p><p><img src="http://cdn.tianwen42.top/img/picgo/20210804165007.jpg" alt="4e3a216d4de8527aa8e0dc42751efbc"></p><p>我个人很喜欢一句话，<strong>用脚去丈量能够企及的大地</strong></p><h1 id="关于信息超载"><a href="#%E5%85%B3%E4%BA%8E%E4%BF%A1%E6%81%AF%E8%B6%85%E8%BD%BD" class="headerlink" title="关于信息超载"></a>关于信息超载</h1><p><strong>＂我们被信息淹没，但却渴求知识.＂</strong>（奈斯比特）</p><p>为什么信息过载会产生焦虑？因为你接受的信息没办法给你的生活带来好的转变，但这些信息、挑选信息的过程，却在实实在在地消耗你的有限资源——<strong>时间。</strong></p><p>就我来说，最近的状态实在是不容乐观，国家讲究治理体系和治理能力，那我个人最近的治理效率可谓是低谷，投入与产出之比很低，每天投入的大概是靠着不背单词的几十个单词，知乎和bilibili实在是信息量爆炸，我个人还是很喜欢bilibili的，起初接触到，是因为上面有非常多的课程，但是使用着就会发现，关注越来越多，收藏也越来越多，弹幕本来是互动的好工具，现在我有点儿神经衰落了，什么内容的视频都推送，一股脑的给你，原先我是很讨厌抖音这种短视频内容的，后来发觉b站也愈发累赘了，趋于同化，我如果不能主导这些信息的话，我宁愿不接受这些，索性我卸载了知乎与bilibili，这与我不用QQ是同样的原因，我的b站本来有120+的关注，今天索性清理一下，只有20+了，</p><p>心灵的明亮与模糊，保持积极的向上的很很不容易，在信息超载的时代，不要停止了思考，<strong>多则惑，少则得</strong>，如是而已.</p><p><img src="http://cdn.tianwen42.top/img/picgo/20210806103651.png" alt="image-20210806103651055"></p><h1 id="关于道德"><a href="#%E5%85%B3%E4%BA%8E%E9%81%93%E5%BE%B7" class="headerlink" title="关于道德"></a>关于道德</h1><blockquote><p>齐宣王问曰：“齐桓、晋文之事可得闻乎？”<br>孟子对曰：“仲尼之徒无道桓、文之事者，是以后世无传焉。臣未之闻也。无以，则王乎？”<br>曰：“德何如，则可以王矣？”<br>曰：“保民而王，莫之能御也。”<br>曰：“若寡人者，可以保民乎哉？”<br>曰：“可。”<br>曰：“何由知吾可也？”<br>曰：“臣闻之胡龁曰，王坐于堂上，有牵牛而过堂下者，王见之，曰：‘牛何之？对曰：‘将以衅钟。’王曰：‘舍之！吾不忍其觳觫，若无罪而就死地。’对曰：‘然则废衅钟与？’曰：‘何可废也？以羊易之！’不识有诸？”<br>曰：“有之。”<br>曰：“是心足以王矣。百姓皆以王为爱也，臣固知王之不忍也。”<br>王曰：“然。诚有百姓者。齐国虽褊小，吾何爱一牛？即不忍其觳觫，若无罪而就死地，故以羊易之也。”<br>曰：“王无异于百姓之以王为爱也。以小易大，彼恶知之？王若隐其无罪而就死地，则牛羊何择焉？” 王笑曰：“是诚何心哉？我非爱其财。而易之以羊也，宜乎百姓之谓我爱也。”<br>曰：“无伤也，是乃仁术也，见牛未见羊也。君子之于禽兽也，见其生，不忍见其死；闻其声，不忍食其肉。是以君子远庖厨也。”</p></blockquote><p>就事论事的话，“君子远庖厨”本身就是一种伪善。道德本就难以单一的界定，时至今日，这两种道德仍然可能发生矛盾，我们可能仍然会面临相似的问题</p><p><strong>城市上空我们这一排透着灯光的窗户，对于昏黄街道上漫步的行人来说，一定蕴藏着几许人生的秘密。我也看到了这样一位行人，正在抬头仰望，独自思索。我既在其中，又在其外，对人生的变幻无穷感到陶醉又厌恶</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 反省 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我的大学</title>
+      <link href="//posts/3bdf9979.html"/>
+      <url>//posts/3bdf9979.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="不断发问"><a href="#%E4%B8%8D%E6%96%AD%E5%8F%91%E9%97%AE" class="headerlink" title="不断发问"></a>不断发问</h2><p>走进大学，时不时问一问自己</p><blockquote><p>诸位在校，有两个问题应该自己问问，第一，到浙大来做什么？第二，将来毕业后要做什么样的人？</p><p>科学的方法，公正的态度，果断的决心</p></blockquote><p>我们的心中一定另有答案，或清楚或模糊。</p><p>每个人都应该想一想才不会虚度自己在大学中的时光。</p><img src="https://qiniu.tianwen42.top/picgo/20220202.png" style="zoom:50%;"><h2 id="关于学习"><a href="#%E5%85%B3%E4%BA%8E%E5%AD%A6%E4%B9%A0" class="headerlink" title="关于学习"></a>关于学习</h2><blockquote><p>骐骥一跃，不能十步。驽马十驾，功在不舍。</p></blockquote><p>我肯定不是骐骥了，自认不是一个聪明的人，所以我花的时间多，当我一进入大学的时候，所有的老师都告诉我要好好学习，不要逃课，不要挂科，我也的的确确这样做了，但是这样的学习方式真的正确嘛？打一个问号。而且大学里的考试也就那样，说到底，还是看个人的要求，噢对了，学习这件事不拘于形是最好的，</p><p>喜欢去图书馆借各种各样的书，有时候自己的卡借满了，还拿同学的卡去借书，文学，历史，摄影，传记，计算机，专业书，总之就是什么都借书，虽然有些来不及看就超期了，但仍然热衷于借书，还整了个年度优秀读者，很多人挺不愿意去图书馆，但换一个角度想想，不能白交学费了不是，白嫖不香嘛?</p><p>我越发体会到术业有专攻的意义所在，人是没有精力抓住所有东西的，我深知人与人之间的差距，因为我老是犯错误，所有问题多的不得了，但似乎也让我遇事总是多问一句为什么，除了面子上挂不住，其他的好像也不坏。  </p><p>我尝试参加数学建模比赛，说实话，好难，太综合了，就像是到了新的领域一样，我才明白综合运用各种能力的重要性，不可能所有的能力都精通，我想读研的意义也于此，建模对学习综合性的知识意义很大，论文，编程，数学，这都是极为重要的，虽然这次做的不咋样，我想下次我还是会去挑战，如果你现在还不知道自己要干什么，如果你有一个兴趣爱好，坚持去做。</p><p>要敢于向权威挑战，不懂就问，有什么啊，干就完了！</p><h2 id="关于专业"><a href="#%E5%85%B3%E4%BA%8E%E4%B8%93%E4%B8%9A" class="headerlink" title="关于专业"></a>关于专业</h2><p>我试着去理解和体会这个专业，要我说，地理信息科学这个专业像<strong>中间件</strong>，为各个领域的提供地理相关的数据，你就处理好给人家便是了，人家也不需要管这些细节。</p><p>我觉得我所在的专业说穿就这几类工作，建模(写报告论文)，开发，处理数据(80%的人从事工作)。任何专业的学习都是选一方面去深入理解，但我感觉这个专业的<strong>思想僵化</strong>的非常严重，我实在不想在这种道路上走下去，长路漫漫，其修远兮。</p><p>在百无聊赖的某一天，昏昏沉沉地走在路上，我想着关于意义云云的事，看着路旁慵懒的小猫咪，我突然有了灵感，计算机于世界的意义，最终在于<strong>助力实体</strong>。仿佛一切都拨云见日，找到了答案，脚步也轻快了不少。</p><h2 id="关于生活"><a href="#%E5%85%B3%E4%BA%8E%E7%94%9F%E6%B4%BB" class="headerlink" title="关于生活"></a>关于生活</h2><p>时不时会出去学校玩一玩的，吃一吃美食，和同学逛一逛南京，看话剧，五一去了秦淮河吃烧烤，在秦淮河边看来往的游船，还吃了烤鸭(虽然不太好吃，肉有点干，柴了，没有南京大牌档的烤鸭好吃😋)，去了江苏大剧院听音乐会，去了鱼嘴看日落(虽然到的时候都是晚上了)，还去了玄武湖的相亲角(长见识了)，这个还是比较happy的。</p><img src="https://yanglin42.oss-cn-hangzhou.aliyuncs.com/img/picgo/image-20210505225222142.png" alt="image-20210505225222142" style="zoom:12%;"><img src="https://yanglin42.oss-cn-hangzhou.aliyuncs.com/img/picgo/image-20210505225102055.png" alt="image-20210505225102055" style="zoom: 25%;"><img src="https://yanglin42.oss-cn-hangzhou.aliyuncs.com/img/picgo/image-20210505225254141.png" alt="image-20210505225254141" style="zoom:12%;"><p>想一想，时间过得真的好快啊，疫情的原因就不说了，在学校坐牢，也不能外出（懂得都懂），大学四年，疫情占3年。<br>我是个热衷于记录的人，记录一切，从初中到现在，从纸质到电子，到现在已经蛮久了，有一大堆的碎碎念，有的可能不适合放上来供大家看，只能独享。</p><p><strong>为什么记录?</strong><br>也许这些时间做一些其他的事，多看几个视频，多做几个题目，搞钱，诸如此类皆可，这记录也许一文不值，读起来还有些琐碎，但是，这看起来无意义的事对我来说却是及其重要之事</p><p>虽然现在也不知道这些是否值得，但是，这完全是出于兴趣啊！ </p><h2 id="关于爱情"><a href="#%E5%85%B3%E4%BA%8E%E7%88%B1%E6%83%85" class="headerlink" title="关于爱情"></a>关于爱情</h2><p>好想谈一场恋爱，老妈都催着找女朋友了，在我跟前旁敲侧击或者给我推送微信，谁叫我比较叛逆，偏偏喜欢剑走偏锋，但就是找不到女朋友，有女生追过，接触了感觉很不对，我就是一个麻瓜，会不到人家的意，再不抓紧谈恋爱都要毕业了，有的初中同学孩子都会爬了，我人麻了，也曾追求过，但好像结果不太妙，怎敢奢求太多呢，但爱情是两个人的游戏，双向的奔赴才有意义，我可能真是没救了！谈个恋爱还在乎什么狗屁意义云云，我仍对爱情保持热烈的向往，有着独立世界和一些浪漫的坚守，还在等待一个人！如果你遇到了一个纯粹的人，请抓住她的手，别把她弄丢了。希望有一天能体会到众里寻他千百度。蓦然回首，那人却在，灯火阑珊处的感觉。</p><h2 id="关于未来"><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AA%E6%9D%A5" class="headerlink" title="关于未来"></a>关于未来</h2><p>时间过得非常快啊，我感觉大学时光所剩不多了，今日见一东南大学的老师在群里，算是个网友，还挺有意思的，估计是个工科教授，说话带有工科特有的严谨与务实，我觉得有些话说的好有道理啊，他说大学之学习掌握学习方法，遇到问题，知道怎么找入口，才是关键，他大呼现在的论文灌水，更应该重教学重教材，我欣赏他的想法，但可能这样的想法不会被接受，</p><p>想过考南师大，也考虑过去武汉，我挺喜欢武汉这座城市的，想着考个武汉的学校，但是想来想去，总感觉哪里不对劲，我觉得计算机的未来可能会比地信更更加广阔，最终定下定决心了考数1+英1+408，杭州电子科技大学，来赌一手未来</p><p>大学不是象牙塔，请搞清楚这一点，这是一个大学生，也一个成年人应该有的一点认识，成为一个好人固然很容易，但我想说的是，请小心使用你的善良，刚入大学时，初听乐经良老师的话还不是很明白，一语成谶，好的坏的都会进入校园，去感受，看清这个世界，然后接受它。</p><h2 id="写在最后"><a href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E" class="headerlink" title="写在最后"></a>写在最后</h2><p>能够做点对社会有用的事情，就不枉这一生，请保持一颗<strong>赤子之心</strong>，这是很重要的事情</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 大学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>最短路径算法</title>
+      <link href="//posts/9df73d67.html"/>
+      <url>//posts/9df73d67.html</url>
+      
+        <content type="html"><![CDATA[<p>最短路径算法</p><span id="more"></span><h1 id="1-dijistra"><a href="#1-dijistra" class="headerlink" title="1.dijistra"></a>1.dijistra</h1><p><img src="https://cdn.tianwen42.top/img/picgo/20210604151428.png" alt="这里写图片描述"></p><p>邻接矩阵</p><p><img src="https://cdn.tianwen42.top/img/picgo/20210604151620.png" alt="img"></p><p>从v1开始找最小权重，如果权重和小于当前值，则置换，初始为<br>$$<br>dis\left[ \begin{matrix}<br>    \infty&amp;        \infty&amp;        \infty&amp;        \infty&amp;        \infty&amp;        \infty\<br>\end{matrix} \right]<br>$$<br>第一次：v1<br>$$<br>dis\left[ \begin{matrix}<br>    0&amp;        \infty&amp;        10&amp;        \infty&amp;        30&amp;        100\<br>\end{matrix} \right]<br>$$<br>第二次：v1-v3，距离v4最近（10+50）<br>$$<br>dis\left[ \begin{matrix}<br>    0&amp;        \infty&amp;        10&amp;        60&amp;        30&amp;        100\<br>\end{matrix} \right]<br>$$<br>第三次v1-v3-v4-,距离v6最近（10+50+10）<br>$$<br>dis\left[ \begin{matrix}<br>    0&amp;        \infty&amp;        10&amp;        60&amp;        30&amp;        70\<br>\end{matrix} \right]<br>$$<br>第四次：v1-v5，距离v4最近（30+20）<br>$$<br>dis\left[ \begin{matrix}<br>    0&amp;        \infty&amp;        10&amp;        50&amp;        30&amp;        70\<br>\end{matrix} \right]<br>$$<br>第五次：v1-v5-v4，距离v6最近（30+20+10）<br>$$<br>dis\left[ \begin{matrix}<br>    0&amp;        \infty&amp;        10&amp;        50&amp;        30&amp;        60\<br>\end{matrix} \right]<br>$$</p><p><img src="https://cdn.tianwen42.top/img/picgo/20210604151629.png" alt="这里写图片描述"></p><h1 id="2-prim算法"><a href="#2-prim%E7%AE%97%E6%B3%95" class="headerlink" title="2.prim算法"></a>2.prim算法</h1><p>按权重从小到大分布散列，取小至大权路径</p><p><img src="https://cdn.tianwen42.top/img/picgo/20210604151637.png" alt="这里写图片描述"></p><h1 id="3-Kruskal算法"><a href="#3-Kruskal%E7%AE%97%E6%B3%95" class="headerlink" title="3.Kruskal算法"></a>3.Kruskal算法</h1><p>按最小权重取探索，如果访问过的节点则回退走另一条路径，直至连通所有节点</p><p><img src="https://cdn.tianwen42.top/img/picgo/20210604151641.png" alt="这里写图片描述"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 最短路径 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>本科课程的记录</title>
+      <link href="//posts/3ad5cb2d.html"/>
+      <url>//posts/3ad5cb2d.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="所学课程的记录"><a href="#%E6%89%80%E5%AD%A6%E8%AF%BE%E7%A8%8B%E7%9A%84%E8%AE%B0%E5%BD%95" class="headerlink" title="所学课程的记录"></a>所学课程的记录</h2><table><thead><tr><th>课程名</th><th>分数</th></tr></thead><tbody><tr><td>高等数学</td><td>98</td></tr><tr><td>计量地理</td><td>96</td></tr><tr><td>普通测量学</td><td></td></tr><tr><td>区域分析方法</td><td></td></tr><tr><td>C语言程序设计</td><td>94</td></tr><tr><td>地图学</td><td></td></tr><tr><td>Python</td><td>95</td></tr><tr><td><a target="_blank" rel="noopener" href="https://github.com/tianwen42/courses">空间数据采集与管理</a></td><td></td></tr><tr><td><a target="_blank" rel="noopener" href="https://github.com/tianwen42/courses">统计学基础</a></td><td></td></tr><tr><td>创新创业教育(二)</td><td></td></tr><tr><td><a target="_blank" rel="noopener" href="https://github.com/tianwen42/courses">计算机辅助制图（AutoCAD）</a></td><td>95</td></tr><tr><td><a target="_blank" rel="noopener" href="https://github.com/tianwen42/web-design">网页设计基础</a></td><td></td></tr><tr><td>数字摄影测量学</td><td></td></tr><tr><td><a target="_blank" rel="noopener" href="https://github.com/tianwen42/DB-curriculum-design">空间数据库课程设计</a></td><td>95</td></tr><tr><td><a target="_blank" rel="noopener" href="https://github.com/tianwen42/courses">遥感数字图像处理</a></td><td>88</td></tr><tr><td>地理信息系统原理和应用</td><td></td></tr><tr><td><a target="_blank" rel="noopener" href="https://github.com/tianwen42/courses">GIS空间分析</a></td><td></td></tr><tr><td>人文与经济地理学</td><td></td></tr><tr><td>遥感概论</td><td></td></tr><tr><td>线性代数</td><td>87</td></tr><tr><td>面向对象程序设计</td><td>93</td></tr><tr><td>数据结构</td><td></td></tr><tr><td>地理信息系统原理</td><td></td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> GIS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 本科 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>信条</title>
+      <link href="//posts/9306d2a9.html"/>
+      <url>//posts/9306d2a9.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>如期待奇迹发生，那唯有不停伸手去抓紧，去把握才行。 –秒速5厘米</p></blockquote><h1 id="不要浪费时间"><a href="#%E4%B8%8D%E8%A6%81%E6%B5%AA%E8%B4%B9%E6%97%B6%E9%97%B4" class="headerlink" title="不要浪费时间"></a>不要浪费时间</h1><p>我最近时常感觉到术业有专攻这句话是对的，人的精力有限，不可能什么领域都触及，即使我深人与人之间的差距，也许有些人拼搏一生达到的高度是别人的一出生就拥有的，但那又怎么样呢？选中一个领域深深的扎下去就好，卓越并非一日之功，要耐住寂寞，保持一颗学徒的心！我来此地为的不是体验生活，一往无前，便是我的信条！</p><h1 id="碎碎念"><a href="#%E7%A2%8E%E7%A2%8E%E5%BF%B5" class="headerlink" title="碎碎念"></a>碎碎念</h1><p>我是十分赞同某手册里的这句话，因为这实在是个大坑，至少在现在这么卷的时代是的。</p><blockquote><p>我手上一本1300页的数学手册，上面记录了人类文明从远古直到二十世纪后半叶的主要数学成果。而我校高等数学教材（上下册）所涵盖的内容，不超过其中的130页。一个真正有志于建造科学大厦的人，是不应抱着一块儿砖头精雕细琢的。</p><p>学习最需要的，不是悲壮的毅力，而是对无限未知的渴求。</p><p>最终来说，学习知识的目的是为后继的知识铺垫，以及培养创造性的思维。所谓有效率的学习，应当是以最高的效率获取知识，服务这两个目标。从现状来看，我们想要把什么都搞扎实的学习习惯，其效率是极端低下的，而在我们通过大量习题，最终扎实掌握的信息里，有效的“知识”却又是如此的少。</p></blockquote><p> 我想起乐老师说的，学数学，更多是一种思考的方法，要常思考，不然时间过去了，有些人的眼睛里有些小模糊，小浑浊，不如刚上大学时那么的明亮了，现在仔细揣度一下，确实如此。</p><h1 id="银河帝国"><a href="#%E9%93%B6%E6%B2%B3%E5%B8%9D%E5%9B%BD" class="headerlink" title="银河帝国"></a>银河帝国</h1><p>突然想到了起很久之前看的银河帝国系列，</p><ol><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9F%BA%E5%9C%B0/1691622">基地</a>(Foundation)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9F%BA%E5%9C%B0%E4%B8%8E%E5%B8%9D%E5%9B%BD">基地与帝国</a> (Foundation and Empire)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%AC%AC%E4%BA%8C%E5%9F%BA%E5%9C%B0">第二基地</a> (Second Foudation)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9F%BA%E5%9C%B0%E5%89%8D%E5%A5%8F">基地前奏</a> (Prelude to Foundation)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%BF%88%E5%90%91%E5%9F%BA%E5%9C%B0">迈向基地</a> (Forward the Foundation)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9F%BA%E5%9C%B0%E8%BE%B9%E7%BC%98">基地边缘</a> (Foundation’s Edge)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%9F%BA%E5%9C%B0%E4%B8%8E%E5%9C%B0%E7%90%83">基地与地球</a> (Foundation and Earth)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%88%91%EF%BC%8C%E6%9C%BA%E5%99%A8%E4%BA%BA/15993891">我，机器人</a> (I, Robot)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%92%A2%E7%A9%B4">钢穴</a> (The Caves of Steel)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%A3%B8%E9%98%B3">裸阳</a> (The Naked Sun)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9B%99%E5%85%89%E4%B8%AD%E7%9A%84%E6%9C%BA%E5%99%A8%E4%BA%BA">曙光中的机器人</a> (The Robots of Dawn)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%B8%8E%E5%B8%9D%E5%9B%BD">机器人与帝国</a> (Robots and Empire)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%B9%81%E6%98%9F%E8%8B%A5%E5%B0%98">繁星若尘</a> (The Stars, Like Dust)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%98%9F%E7%A9%BA%E6%9A%97%E6%B5%81">星空暗流</a>(The Currents of Space)</li><li><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%8B%8D%E7%A9%B9%E4%B8%80%E7%B2%9F">苍穹一粟</a> (Pebblein the Sky)</li></ol><p><img src="http://cdn.tianwen42.top/img/picgo/20210623095935.jpeg" alt="img"></p><p>我觉得很适合在这个词了，一个统治超过2500万个住人行星、疆域横跨十万光年、总计数兆亿人口的庞大帝国崛起——银河帝国，虽然毫无征兆，但已存在一万两千年之久的银河帝国突然灭亡，整个银河进入黑暗时期，即使再过于强大也有着致命的弱点，银河帝国到阿喀琉斯之踵无不警醒着我的内心。</p><p>强如银河帝国也有倾覆的一天，川陀，我还记得这个全宇宙的中心，想起来仍有些怀念.</p><h1 id="当时只道是寻常"><a href="#%E5%BD%93%E6%97%B6%E5%8F%AA%E9%81%93%E6%98%AF%E5%AF%BB%E5%B8%B8" class="headerlink" title="当时只道是寻常"></a>当时只道是寻常</h1><p>如果你对一个人有什么话要说的，就去说吧，果断一点。</p><blockquote><p>不乱于心 不困于情<br>不滞于物 不怠于身<br>不溺于思 不迷于境<br>不念过往 不畏将来</p></blockquote><h1 id="我对一个人最高的赞誉"><a href="#%E6%88%91%E5%AF%B9%E4%B8%80%E4%B8%AA%E4%BA%BA%E6%9C%80%E9%AB%98%E7%9A%84%E8%B5%9E%E8%AA%89" class="headerlink" title="我对一个人最高的赞誉"></a>我对一个人最高的赞誉</h1><p>我对一个人最高的赞誉就是</p><blockquote><p>‘’他以他的方式度过了这一生’’</p></blockquote><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="530" height="86" src="//music.163.com/outchain/player?type=2&amp;id=22174742&amp;auto=1&amp;height=66"></iframe>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 叭叭两句 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我的书单</title>
+      <link href="//posts/9daba997.html"/>
+      <url>//posts/9daba997.html</url>
+      
+        <content type="html"><![CDATA[<p>下面是一些我读过的书</p><p>★ ★ ★ ★ ☆ ☆ ☆：推荐指数，七星制。</p><h2 id="文学小说"><a href="#%E6%96%87%E5%AD%A6%E5%B0%8F%E8%AF%B4" class="headerlink" title="文学小说"></a>文学小说</h2><ol><li><strong>《小王子》</strong> by 阿城 2015年9月 ★ ★ ★ ★ ★ ★ ★</li><li><strong>《追风筝的人》</strong> by 卡勒德·胡赛尼 2016年6月 ★ ★ ★ ★ ★ ☆ ☆</li><li><strong>《查令十字街84号》</strong> by 海莲·汉芙 2016年9月 ★ ★ ★ ★ ☆ ☆ ☆</li><li><strong>《围城》</strong> by 钱钟书 2017年1月 ★ ★ ★ ★ ★ ☆ ☆</li><li><strong>《一个陌生女人的来信》</strong> by 茨威格 2017年1月 ★ ★ ★ ★ ★ ★ ☆</li><li><strong>《局外人》</strong> by 茨威格 2017-1 ★ ★ ★ ★ ☆ ☆ ☆</li><li><strong>《摆渡人》</strong> by 克莱尔·麦克福尔 2019年3月28 ★ ☆ ☆ ☆ ☆ ☆ ☆</li><li><strong>《月亮与六便士》</strong> by 毛姆 2019年4月 ★ ★ ★ ★ ★ ☆ ☆</li><li><strong>《活着》</strong> by 余华 2019年5月★ ★ ★ ★ ★ ★ ☆</li></ol><h2 id="历史"><a href="#%E5%8E%86%E5%8F%B2" class="headerlink" title="历史"></a>历史</h2><ol><li><p><strong>《万古江河》</strong> by <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%AE%B8%E5%80%AC%E4%BA%91/7418760">许倬云</a> 2016年9月 ★ ★ ★ ★ ★ ★ ☆ </p><blockquote><p>在世界文明存在与变化的剧烈大潮之中，讲述中国如何自处，如何看待自身的历史与文化？搞清楚中国从何处来，中国文化从何处来，才能明白要向何处去，非常不错的一本书</p></blockquote></li></ol><h2 id="经济"><a href="#%E7%BB%8F%E6%B5%8E" class="headerlink" title="经济"></a>经济</h2><ol><li><strong>《国富论》</strong> by 亚当斯密 2017年2月 ★ ★ ★ ☆ ☆ ☆ ☆</li><li><strong>《数据之巅》</strong> by 涂子沛 2019年6月 ★ ★ ★ ★ ☆ ☆ ☆</li></ol><h2 id="科幻"><a href="#%E7%A7%91%E5%B9%BB" class="headerlink" title="科幻"></a>科幻</h2><ol><li><p><strong>《银河帝国系列》</strong>by 艾萨克·阿西莫夫 2018年 ★ ★ ★ ★ ★ ★ ☆</p><blockquote><p>我觉得封神不为过，全系列15册，开创机器人三定律，放在现在也毫不违和，基地三部曲最好看</p></blockquote></li><li><p><strong>《三体·“地球往事”三部曲之一》</strong> by 刘慈欣 2016年4月 ★ ★ ★ ☆ ☆ ☆ ☆</p></li><li><p><strong>《流浪地球》</strong> by 刘慈欣 2019年3月 ★ ★ ★ ★ ☆ ☆ ☆</p></li></ol><h2 id="计算机"><a href="#%E8%AE%A1%E7%AE%97%E6%9C%BA" class="headerlink" title="计算机"></a>计算机</h2><ol><li><strong>《淘宝技术这十年》</strong> by 子柳 2015年6月 ★ ★ ★ ★ ★ ☆ ☆</li></ol><h2 id="待读-x2F-在读"><a href="#%E5%BE%85%E8%AF%BB-x2F-%E5%9C%A8%E8%AF%BB" class="headerlink" title="待读/在读"></a>待读/在读</h2><ol><li><p><strong>《女士品茶》</strong> by 萨尔斯伯格</p><blockquote><p>从女士品茶到统计科学</p></blockquote></li><li><p><strong>《Effective C++》</strong> by 侯捷 2021年12月 ★ ★ ★ ★ ★ ☆ ☆</p></li></ol><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="530" height="86" src="//music.163.com/outchain/player?type=2&amp;id=28299268&amp;auto=1&amp;height=66"></iframe>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> reading </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>在这死去的人们</title>
+      <link href="//posts/bc01.html"/>
+      <url>//posts/bc01.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="在这死去的人们"><a href="#%E5%9C%A8%E8%BF%99%E6%AD%BB%E5%8E%BB%E7%9A%84%E4%BA%BA%E4%BB%AC" class="headerlink" title="在这死去的人们"></a>在这死去的人们</h3><blockquote><p>这儿有一大片乌云</p><p>我能看见</p><p>在这死去的人们</p><p>乌云之下 不能散去</p></blockquote><blockquote><p>倒不是我能看见他们的魂灵</p><p>在空气中哀嚎，叫喊</p><p>哭泣 诉说</p><p>他们的躯体已经腐化</p><p>但他们的骨头还在那儿</p><p>真真切切地在那儿</p><p>在土地里挖掘</p></blockquote><blockquote><p>我看得见</p><p>那些骨头想出来</p><p>从阴冷的土里</p><p>爬出来</p><p>然后哀嚎 叫喊</p><p>哭泣 诉说</p><p>就连他们的骨头上</p><p>都布满伤痕</p><p>一个骨头挖不动了，下一个</p><p>发誓要让世人看见</p><p>可土地太厚，也太冷</p></blockquote><blockquote><p>在一个夏夜</p><p>我曾见过一个骨头</p><p>他要说些什么</p><p>他能说些什么</p><p>最后也只是无尽的磷火 伴他左右</p></blockquote><blockquote><p>朝着地底望去</p><p>俨然一个火的世界</p><p>将夏夜照亮 </p></blockquote><blockquote><p>找一株蒲公英</p><p>向她诉说</p><p>你们的故事</p><p>当她流浪到世界各地时</p><p>让她带给世人</p></blockquote><blockquote><p>至少</p><p>让地上的人 记住地下的人</p><p>让醒着的人 记住沉睡的人</p><p>让活着的人 记住死去的人</p></blockquote><p>——2019.10.3南京大屠杀纪念馆</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 诗 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>变成一株蒲公英</title>
+      <link href="//posts/8bdf.html"/>
+      <url>//posts/8bdf.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>青年人珍重的描写罢，时间正翻着书页，请你着笔！ </p></blockquote><h2 id="变成一株蒲公英"><a href="#%E5%8F%98%E6%88%90%E4%B8%80%E6%A0%AA%E8%92%B2%E5%85%AC%E8%8B%B1" class="headerlink" title="变成一株蒲公英"></a>变成一株蒲公英</h2><blockquote><p>变成一株蒲公英</p><p>在深深的山谷里</p><p>寂静生长</p><p>等待一阵风吹过</p><p>带你去流浪</p><p>雪花般的躯体</p><p>一吹 消散了</p><p>不落一点痕迹地</p><p>消散了 散落到各个地方</p><p>在田间地头</p><p>在城市街角</p><p>在某个女孩的花盆里</p><p>在南方 北方 东方 西方</p><p>春风一拂</p><p>这片大地又长出了无数的蒲公英</p><p>你看着这一切</p><p>笑出了声</p></blockquote><p>​    </p><p>——2019.9.28</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 诗 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
