@@ -4,7 +4,7 @@ date: 2021-04-22 13:32:00
 updated: 2023-02-14 22:00:07
 permalink: "posts/3ad5cb2d.html"
 categories:
-  - "GIS"
+  - "基础"
 tags:
   - "本科"
 ---
@@ -109,3 +109,4 @@ tags:
 <td></td>
 </tr>
 </tbody></table>
+

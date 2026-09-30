@@ -37,6 +37,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 updated_option: ''
+syntax_highlighter: false
 highlight:
   enable: false
   line_number: false
@@ -84,3 +85,4 @@ deploy:
   type: ''
 
 theme: 3-hexo
+

@@ -3,7 +3,13 @@
                 <a href="<%= theme.miit.url || 'http://beian.miit.gov.cn/'%>"><%=theme.miit.info%></a>
         </span>
     <%}%>
-    <%if(theme.bottom_text){%><%=theme.bottom_text%><%} else {%>©2017 <%=config.author%><%}%>
+    <%if(theme.copyright_start){%>
+      <span class="copyright-text">©<%= theme.copyright_start %>-<span id="copyright-year"><%= new Date().getFullYear() %></span></span>
+    <%} else if(theme.bottom_text){%>
+      <span class="copyright-text"><%= theme.bottom_text %></span>
+    <%} else {%>
+      <span class="copyright-text">©<%= new Date().getFullYear() %> <%= config.author %></span>
+    <%}%>
     <% if (theme.runtime && theme.runtime.on) { %>
       <span class="runtime-divider">·</span>
       <span class="runtime-counter">已经 <span id="site-runtime">计算中...</span></span>

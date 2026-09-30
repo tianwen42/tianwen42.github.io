@@ -1,10 +1,10 @@
 ---
-title: "力扣2022-04-10-2"
+title: "852. 山脉数组的峰顶索引"
 date: 2022-04-10 23:53:00
 updated: 2022-04-13 18:23:24
 permalink: "posts/7bb.html"
 categories:
-  - "数据结构与算法"
+  - "DS"
 tags:
   - "算法"
   - "leetcode"
@@ -21,33 +21,58 @@ tags:
 </ul>
 <p>给你由整数组成的山脉数组 arr ，返回任何满足 arr[0] &lt; arr[1] &lt; … arr[i - 1] &lt; arr[i] &gt; arr[i + 1] &gt; … &gt; arr[arr.length - 1] 的下标 i 。</p>
 <p><strong>示例 1：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：arr = [0,1,0]
+
+
+```text
+输入：arr = [0,1,0]
 输出：1
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+```
+
+
 
 
 <p><strong>示例 2：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：arr = [0,2,1,0]
+
+
+```text
+输入：arr = [0,2,1,0]
 输出：1
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+```
+
+
 
 
 <p><strong>示例 3：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：arr = [0,10,5,2]
+
+
+```text
+输入：arr = [0,10,5,2]
 输出：1
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+```
+
+
 
 
 <p><strong>示例 4：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：arr = [3,4,5,1]
+
+
+```text
+输入：arr = [3,4,5,1]
 输出：2
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+```
+
+
 
 
 <p><strong>示例 5：</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">输入：arr = [24,69,100,99,79,78,67,36,26,19]
+
+
+```text
+输入：arr = [24,69,100,99,79,78,67,36,26,19]
 输出：2
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+```
+
+
 
 
 
@@ -67,29 +92,38 @@ tags:
 </ol>
 <p>支持暴力法和二分法，显然二分法更快</p>
 </blockquote>
-<h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//暴力法
+<h2 id="解题代码"><a href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81" class="headerlink" title="解题代码"></a>解题代码</h2>
+
+```cpp
+//暴力法
 class Solution {
 public:
-    int peakIndexInMountainArray(vector&lt;int&gt;&amp; arr) {
-        if(arr[0]&gt;arr[1]){
+    int peakIndexInMountainArray(vector<int>& arr) {
+        if(arr[0]>arr[1]){
             return 0;
         }
-        for(int i=1;i&lt;arr.size()-1;i++){
-            if(arr[i]&gt;arr[i-1]&amp;&amp;arr[i]&gt;arr[i+1]){
+        for(int i=1;i<arr.size()-1;i++){
+            if(arr[i]>arr[i-1]&&arr[i]>arr[i+1]){
                 return i;
             } 
         }
         return arr.size()-1;
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+};
+```
 
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution {
+
+
+
+
+```cpp
+class Solution {
 public:
-    int peakIndexInMountainArray(vector&lt;int&gt;&amp; arr) {
-        // if(arr[0]&gt;arr[1]){return 0;}
+    int peakIndexInMountainArray(vector<int>& arr) {
+        // if(arr[0]>arr[1]){return 0;}
         int left=0,right=arr.size()-1,mid=left+(right-left)/2;
         while(left!=right){
-            if(arr[left]&lt;arr[mid]){
+            if(arr[left]<arr[mid]){
                 right=mid;
             }else{
                 left=mid+1;
@@ -98,4 +132,7 @@ public:
         }
         return left;
     }
-};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+};
+```
+
+

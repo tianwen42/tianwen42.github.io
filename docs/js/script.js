@@ -32,8 +32,7 @@ var $titleList = $("nav");
 var $localSearchResult = $("#local-search-result")
 var isFullScreen = $(window).width() <= 1024
 var isFriend = false
-var shortcutKey = $('#theme_shortcut').val() !== 'false'
-$(document).pjax('.nav-right nav a,.nav-left .avatar_target,.site_url', '.pjax', {fragment: '.pjax', timeout: 8000});
+var shortcutKey = $('#theme_shortcut').val() !== 'false'$(document).pjax('.nav-right nav a,.nav-left .avatar_target,.site_url', '.pjax', {fragment: '.pjax', timeout: 8000});
 $(document).on({
     /*点击链接后触发的事件*/
     'pjax:click': function () {
@@ -90,6 +89,7 @@ function afterPjax() {
     /*新内容淡入*/
     content.css({'opacity': 1}).removeClass('fadeOuts').addClass('fadeIns');
     bind();
+
     /*discus获取评论数*/
     if ($(".theme_disqus_on").val() === "true") {
         DISQUSWIDGETS.getCount({reset: true});
@@ -429,6 +429,7 @@ $(".full-toc .full,.semicircle").click(function (e) {
     }
 });
 
+
 container.hover(function () {
     $(".semicircle").css("margin-left", "-43px");
 },function () {
@@ -610,9 +611,11 @@ function bind() {
     if ($('#theme_highlight_on').val() === 'true') {
         $('pre code').each(function (i, block) {
             var codeClass = $(this).attr('class') || ''
+            var languageMatch = codeClass.match(/language-([^\s]+)/)
+            var codeType = languageMatch ? languageMatch[1] : codeClass.replace(/\bhljs\b/g, '').trim()
             var hasCopy = $('#theme_code_copy').val() !== 'false'
             // 添加复制功能
-            $(this).after('<div class="code-embed"><span class="code-embed-type">'+ (codeClass.indexOf('hljs') === -1 ? codeClass : codeClass.indexOf('hljs') === 0 ? '' : codeClass.replace(/[\s]?hljs/g, ''))+'</span>'+(hasCopy ? '<span class="code-embed-copy" onclick="copyCode(this)">复制代码</span>' : '')+'</div>')
+            $(this).after('<div class="code-embed"><span class="code-embed-type">'+ codeType +'</span>'+(hasCopy ? '<span class="code-embed-copy" onclick="copyCode(this)">复制代码</span>' : '')+'</div>')
             // 渲染样式
             if (codeClass.indexOf('hljs') === -1) {
                 hljs.highlightBlock(block);
@@ -784,8 +787,9 @@ function bind() {
  * 复制代码
  */
 function copyCode(e) {
-    $(e).parent().prev().text()
-    if (copy($(e).parent().prev().text())) {
+    var code = $(e).parent().prev().get(0)
+    var text = code ? code.textContent : ''
+    if (copy(text)) {
         $(e).html('复制成功')
         setTimeout(function () {
             $(e).html('复制代码')

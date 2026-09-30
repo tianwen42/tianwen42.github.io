@@ -1564,9 +1564,15 @@
 #post .copyright {
   margin-top: 50px;
   padding-bottom: 30px;
-  line-height: 14px;
+  line-height: 1.8;
   text-align: center;
-  color: #bcc1c4;
+  color: #8b9199;
+  font-size: 13px;
+}
+#post .copyright .footer-entry {
+  user-select: text;
+  -webkit-user-select: text;
+  cursor: text;
 }
 #post .copyright .miit {
   display: inline-block;
@@ -1583,31 +1589,34 @@
 #post .copyright a:hover {
   text-decoration: underline;
 }
+#post .copyright .copyright-text {
+  color: #8b9199;
+  font-weight: 500;
+}
 #post .copyright .runtime-divider {
-  margin: 0 7px;
-  color: #d4d7da;
+  margin: 0 8px;
+  color: #8b9199;
+  opacity: 0.55;
 }
 #post .copyright .runtime-counter {
-  color: #9b9fa4;
+  color: #8b9199;
+  font-weight: 500;
 }
 #post .article_copyright {
-  margin: 28px 30px 20px;
-  padding: 14px 18px;
-  background-color: #f7f8fa;
-  border: 1px solid #e6e8eb;
-  border-left: 3px solid #4094c7;
-  border-radius: 6px;
-  font-weight: 400;
-  line-height: 1.9;
-  color: #666;
-  font-size: 14px;
+  margin-bottom: 20px;
+  padding: 5px 30px;
+  background-color: #f4f6f8;
+  border-radius: 8px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #4f555c;
+  font-size: 16px;
 }
 #post .article_copyright .copy-title {
   display: inline-block;
   min-width: 72px;
-  color: #333;
-  font-weight: 600;
-  margin-right: 6px;
+  color: #2f3439;
+  margin-right: 10px;
 }
 #post .article_copyright>p {
   margin: 0;
