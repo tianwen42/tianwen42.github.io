@@ -4,4 +4,8 @@
         </span>
     <%}%>
     <%if(theme.bottom_text){%><%=theme.bottom_text%><%} else {%>©2017 <%=config.author%><%}%>
+    <% if (theme.runtime && theme.runtime.on) { %>
+      <span class="runtime-divider">·</span>
+      <span class="runtime-counter">已经 <span id="site-runtime">计算中...</span></span>
+    <% } %>
 </p>

@@ -851,6 +851,10 @@ int digitalRepeated(int x) &#123;
     <div class="copyright">
         <p class="footer-entry">
     ©2020-2022 木木
+    
+      <span class="runtime-divider">·</span>
+      <span class="runtime-counter">已经 <span id="site-runtime">计算中...</span></span>
+    
 </p>
 
     </div>
@@ -1015,6 +1019,33 @@ int digitalRepeated(int x) &#123;
 
 
 
+
+
+
+<script>
+(function () {
+    if (window.__siteRuntimeStarted) return;
+    window.__siteRuntimeStarted = true;
+    var start = new Date('2019-09-23 00:00:00'.replace(' ', 'T') + '+08:00');
+    function updateRuntime() {
+        var target = document.getElementById('site-runtime');
+        if (!target) return;
+        var elapsed = Date.now() - start.getTime();
+        if (!isFinite(elapsed) || elapsed < 0) {
+            target.textContent = '计算中...';
+            return;
+        }
+        var totalSeconds = Math.floor(elapsed / 1000);
+        var days = Math.floor(totalSeconds / 86400);
+        var hours = Math.floor((totalSeconds % 86400) / 3600);
+        var minutes = Math.floor((totalSeconds % 3600) / 60);
+        var seconds = totalSeconds % 60;
+        target.textContent = days + '天 ' + hours + 'h ' + minutes + '分钟 ' + seconds + '秒';
+    }
+    updateRuntime();
+    setInterval(updateRuntime, 1000);
+})();
+</script>
 
 
 </html>
