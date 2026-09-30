@@ -5,3 +5,7 @@ db.json
 public/
 .deploy*/
 tools/__pycache__/
+
+docs/
+.chrome-codex-temp/
+.codex-*.png

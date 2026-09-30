@@ -7,7 +7,7 @@
 - Hexo 7.3.0
 - 主题：`hexo-theme-3-hexo`
 - Node.js 20+
-- GitHub Pages 发布目录：`docs/`
+- GitHub Pages 通过 GitHub Actions 自动构建部署
 
 ## 本地使用
 
@@ -25,12 +25,7 @@ npm run clean
 npm run build
 ```
 
-构建结果会生成到 `docs/`，GitHub Pages 的发布源应设置为：
-
-```text
-Branch: main
-Folder: /docs
-```
+构建结果生成到 `docs/`，该目录不提交到 Git；GitHub Actions 会在推送 `main` 后自动构建并部署。
 
 ## 目录
 
@@ -39,7 +34,7 @@ source/_posts/       文章
 source/about/        关于页
 source/日常清单/      日常清单页
 themes/3-hexo/       主题及个人配置
-docs/                Hexo 生成的静态站点
+.github/workflows/   GitHub Pages 自动部署工作流
 ```
 
 新增文章：
